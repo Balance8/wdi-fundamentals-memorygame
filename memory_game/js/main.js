@@ -56,6 +56,7 @@ var flipCard = function() {
 }
 
 var createBoard = function(){
+
   for (var i = 0; i < cards.length; i++) {
     var newImg = document.createElement('img');
     newImg.setAttribute('src', 'images/back.png');
@@ -63,7 +64,7 @@ var createBoard = function(){
 
     newImg.addEventListener("click", flipCard);
     document.getElementById("game-board").appendChild(newImg);
-  }
+  } 
 }
 
 var resetBoard = function (){
@@ -73,6 +74,7 @@ var resetBoard = function (){
     var image = images[i]
     image.setAttribute('src', 'images/back.png');
   }
+  cardsInPlay = [];
 }
 var setButton = function(){
 	var resetButton = document.getElementById("reset");
